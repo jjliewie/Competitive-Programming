@@ -31,7 +31,7 @@ def mad_scientist(n, k):
                 end = i
     return cnt
 
-a = int(t())
+_ = int(t())
+a = t()
 b = t()
-c = t()
-print(mad_scientist(b, c))
+print(mad_scientist(a, b))

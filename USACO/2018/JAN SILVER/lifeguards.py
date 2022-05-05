@@ -20,10 +20,10 @@ sweep.sort(key=lambda x:x[0])
 temp = sweep[0][1]
 cover = sweep[0][1] - sweep[0][0]
 
-find_min = [0]*n
+find_min = [0] * n
 
 for i in range(len(sweep)):
-    find_min[i] = sweep[i][1]-sweep[i][0]
+    find_min[i] = sweep[i][1] - sweep[i][0]
 
 cnt = 1
 
@@ -31,8 +31,8 @@ for start, end in sweep[1:]:
     if temp > start:
         cover += max(0, end-temp)
         find_min[cnt-1] -= (temp - start) 
-        find_min[cnt] -= (min(temp, end)-start)
-    else: cover += end-start
+        find_min[cnt] -= (min(temp, end) - start)
+    else: cover += end - start
 
     temp = max(end, temp)
     cnt += 1
