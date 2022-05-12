@@ -20,11 +20,8 @@ def solution(n, k):
         answer = min(answer, cost_calculate(n, k, i+17, i))
     return answer
 
+with open('skidesign.in') as read:
+    n = int(read.readline())
+    elevation = [int(read.readline()) for _ in range(n)]
 
-n = int(t())
-temp_list = []
-for i in range(n):
-    k = int(t())
-    temp_list.append(k)
-
-print(solution(n, temp_list))
+print(solution(n, elevation), file=open('skidesign.out', 'w'))

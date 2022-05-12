@@ -1,5 +1,9 @@
 import sys
 from collections import deque
+
+sys.stdin = open('meeting.in', 'r')
+sys.stdout = open('meeting.out', 'w')
+
 t = sys.stdin.readline
 
 b_time, e_time = set(), set()
