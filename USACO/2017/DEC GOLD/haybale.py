@@ -22,7 +22,7 @@ def search(x):
     put[x] = search(put[x])
     return put[x]
 
-def add(x,y):
+def add(x, y):
     x, y = search(x), search(y)
     res[x]+= res[y]
     res[y] = 0
