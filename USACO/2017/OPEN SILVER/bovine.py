@@ -14,9 +14,10 @@ acgt = set()
 for a, b, c in combinations(range(m), 3):
     acgt.clear()
     for i in s: 
-        acgt.add(sum(i[a], i[b], i[c]))
+        acgt.add(i[a] + i[b] + i[c])
     for i in p: 
-        if sum(i[a], i[b], i[c]) in acgt: break
+        if i[a] + i[b] + i[c] in acgt: 
+            break
     else:
         pos += 1
 
