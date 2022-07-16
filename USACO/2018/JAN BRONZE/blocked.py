@@ -5,8 +5,8 @@ sys.stdout = open("billboard.out", "w")
 
 input = sys.stdin.readline
 
-x1, y1, x2, y2 = map(int,input().split())
-x3, y3, x4, y4 = map(int,input().split())
+x1, y1, x2, y2 = map(int, input().split())
+x3, y3, x4, y4 = map(int, input().split())
 
 if x3 <= x1 and x2 <= x4:
     

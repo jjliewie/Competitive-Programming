@@ -10,8 +10,8 @@ class Blocked{
     }
 
     public static int solution(int x1, int y1, int x2, int y2, int x3, int y3, int x4, int y4){
-        boolean tl = x3 <= x1 && y4 >= y2;
         boolean tr = y4 >= y2 && x4 >= x2;
+        boolean tl = x3 <= x1 && y4 >= y2;
         boolean br = x4 >= x2 && y3 <= y1;
         boolean bl = y3 <= y1 && x3 <= x1;
 
@@ -19,23 +19,16 @@ class Blocked{
             return 0;
         }
 
-        if (tr && br) {
-            return area(x2, x4, y1, y2);
-        }
-
-        if (bl && tl) {
-            return area(x2, x4, y1, y2);
-        }
-
-        if (tr && tl) {
+        if (tr && tl || br && bl) {
             return area(x1, x2, y1, y3);
         }
 
-        if (br && bl) {
-            return area(x1, x2, y1, y3);
+        if (tr && br || bl && tl) {
+            return area(x2, x4, y1, y2);
         }
 
         return area(x1, x2, y1, y2);
+        
     }
 
     public static void main(String[] args) throws IOException{
