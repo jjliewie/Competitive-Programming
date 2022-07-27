@@ -2,8 +2,8 @@
 
 import sys
 
-# sys.stdin = open("milkvisits.in", "r")
-# sys.stdout = open("milkvisits.out", "w")
+sys.stdin = open("milkvisits.in", "r")
+sys.stdout = open("milkvisits.out", "w")
 
 t = sys.stdin.readline
 from bisect import bisect_left
