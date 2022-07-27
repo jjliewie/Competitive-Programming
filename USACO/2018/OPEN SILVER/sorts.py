@@ -1,21 +1,14 @@
-import sys
+with open('sort.in') as read:
+	n = int(read.readline())
+	l, locations = [0] * n, {}
 
-sys.stdin = open("sort.in", "r")
-sys.stdout = open("sort.out", "w")
-
-input = sys.stdin.readline
-
-n, fix = int(input()), 111111
-l, locations = [0] * n, {}
-
-for i in range(n):
-    idx = int(input()) * fix + i
-    l[i], locations[idx] = idx, i
+	for i in range(n):
+		val = (int(read.readline()), i)
+		l[i], locations[val] = val, i
     
 sorted_l, ans = sorted(l), -float('inf')
 
 for cnt, i in enumerate(sorted_l):
-  
-    ans = max(ans, locations[i] - cnt)
+	ans = max(ans, locations[i] - cnt)
     
-print(ans + 1)
+print(ans + 1, file=open('sort.out', 'w'))
