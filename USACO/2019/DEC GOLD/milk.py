@@ -1,4 +1,5 @@
 # partial but this is probably the best possible solution (for python) since it works on other sites (not usaco)
+# also I genuinely believe this is correct (euler tour)
 
 import sys
 
