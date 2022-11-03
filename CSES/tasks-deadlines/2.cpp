@@ -4,7 +4,6 @@ using namespace std;
 #define ll long long int
 
 int main(){
-
     int n, t, d;
     ll ans, cnt;
     cin >> n;
