@@ -1,7 +1,7 @@
 import sys
 
-# sys.stdin = open('triangles.in', 'r')
-# sys.stdout = open('triangles.out', 'w')
+sys.stdin = open('triangles.in', 'r')
+sys.stdout = open('triangles.out', 'w')
 
 t = sys.stdin.readline
 
