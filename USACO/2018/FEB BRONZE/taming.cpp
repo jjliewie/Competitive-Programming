@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int x[111], y[111], z[111];
+int x[100], y[100], z[100];
 
 int main(){
 
